@@ -1,10 +1,3 @@
-FROM alpine
-
-RUN apk add --no-cache bash
-
+FROM ubuntu:22.04
 WORKDIR /app
-
 COPY entrypoint.sh .
-RUN chmod +x entrypoint.sh
-
-ENTRYPOINT [ "/app/entrypoint.sh" ]
